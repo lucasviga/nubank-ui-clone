@@ -33,6 +33,7 @@
 		2DC0CD2396F04D26BFD6495F /* GraphikBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5B0DC32C796429199378005 /* GraphikBold.otf */; };
 		E1B4E41076BA4B0985B3FDD4 /* GraphikMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B71E1EFEDF144331897B3A36 /* GraphikMedium.otf */; };
 		7F743A933F0741D98EB5D161 /* GraphikRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9D99FE90A624E97BC20077B /* GraphikRegular.otf */; };
+		785BAE5F79A2433991F79D81 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CCAD5E15981461E8057D087 /* icomoon.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		A5B0DC32C796429199378005 /* GraphikBold.otf */ = {isa = PBXFileReference; name = "GraphikBold.otf"; path = "../src/assets/fonts/GraphikBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		B71E1EFEDF144331897B3A36 /* GraphikMedium.otf */ = {isa = PBXFileReference; name = "GraphikMedium.otf"; path = "../src/assets/fonts/GraphikMedium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A9D99FE90A624E97BC20077B /* GraphikRegular.otf */ = {isa = PBXFileReference; name = "GraphikRegular.otf"; path = "../src/assets/fonts/GraphikRegular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4CCAD5E15981461E8057D087 /* icomoon.ttf */ = {isa = PBXFileReference; name = "icomoon.ttf"; path = "../src/assets/fonts/icomoon.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				A5B0DC32C796429199378005 /* GraphikBold.otf */,
 				B71E1EFEDF144331897B3A36 /* GraphikMedium.otf */,
 				A9D99FE90A624E97BC20077B /* GraphikRegular.otf */,
+				4CCAD5E15981461E8057D087 /* icomoon.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				2DC0CD2396F04D26BFD6495F /* GraphikBold.otf in Resources */,
 				E1B4E41076BA4B0985B3FDD4 /* GraphikMedium.otf in Resources */,
 				7F743A933F0741D98EB5D161 /* GraphikRegular.otf in Resources */,
+				785BAE5F79A2433991F79D81 /* icomoon.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

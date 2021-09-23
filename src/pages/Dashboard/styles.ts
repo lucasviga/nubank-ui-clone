@@ -2,14 +2,12 @@ import styled from 'styled-components/native';
 
 export const Container = styled.ScrollView.attrs({
   showsVerticalScrollIndicator: false,
-})`
-  flex: 1;
-`;
+})``;
 
 export const Header = styled.View`
   height: 135px;
   background-color: #820ad1;
-  padding: 18px 25px;
+  padding: 18px 20px;
 
   display: flex;
   flex-direction: column;
