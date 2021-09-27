@@ -24,6 +24,7 @@ import {
   ContaFeaturesTitle,
   MyCreditsCardsText,
   MyCreditsCards,
+  HideInformation,
 } from './styles';
 
 import Icon from 'react-native-vector-icons/AntDesign';
@@ -33,7 +34,11 @@ import IconFeather from 'react-native-vector-icons/Feather';
 
 import {Button} from '../Button';
 
-export function Content() {
+interface AccountContentProps {
+  isVisible: boolean;
+}
+
+export function Content({isVisible}: AccountContentProps) {
   return (
     <Container>
       <CardConta>
@@ -54,14 +59,14 @@ export function Content() {
             <IconBackground onPress={() => {}}>
               <IconMaterial name="attach-money" color="#181818" size={20} />
             </IconBackground>
-            <ContaFeaturesTitle>Pegar {'\n'} emprestado</ContaFeaturesTitle>
+            <ContaFeaturesTitle>Pegar{'\n'}emprestado</ContaFeaturesTitle>
           </ContaFeaturesItem>
 
           <ContaFeaturesItem>
             <IconBackground>
               <IconFeather name="smartphone" color="#000" size={20} />
             </IconBackground>
-            <ContaFeaturesTitle>Recarga de {'\n'} celular</ContaFeaturesTitle>
+            <ContaFeaturesTitle>Recarga de{'\n'}celular</ContaFeaturesTitle>
           </ContaFeaturesItem>
 
           <ContaFeaturesItem>
@@ -75,12 +80,17 @@ export function Content() {
             <IconBackground>
               <Icon name="questioncircleo" color="#000" size={20} />
             </IconBackground>
-            <ContaFeaturesTitle>Encontrar {'\n'} atalhos</ContaFeaturesTitle>
+            <ContaFeaturesTitle>Encontrar{'\n'}atalhos</ContaFeaturesTitle>
           </ContaFeaturesItem>
         </ContaFeatures>
 
         <MyCreditsCards>
-          <IconFeather name="smartphone" color="#000" size={20} />
+          <IconFeather
+            name="smartphone"
+            color="#000"
+            size={20}
+            style={{transform: [{scaleY: -1}]}}
+          />
           <MyCreditsCardsText>Meus cartões</MyCreditsCardsText>
         </MyCreditsCards>
 
@@ -122,7 +132,7 @@ export function Content() {
           </Row>
 
           <Description>Fatura atual</Description>
-          <Price>R$ 212,00</Price>
+          {isVisible ? <Price>R$ 212,00</Price> : <HideInformation />}
           <Description>Limite disponível de R$ 1.000,00</Description>
         </CardItem>
       </View>
@@ -140,7 +150,11 @@ export function Content() {
           </Row>
 
           <Description>Valor disponível de até</Description>
-          <Description>R$ 1.000,00</Description>
+          {isVisible ? (
+            <Description>R$ 1.000,00</Description>
+          ) : (
+            <HideInformation />
+          )}
         </CardItem>
       </View>
 

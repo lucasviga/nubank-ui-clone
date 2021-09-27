@@ -19,10 +19,10 @@ export const ContaFeatures = styled.View`
 `;
 
 export const ContaFeaturesItem = styled.View`
+  height: 100%;
+  width: 85px;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  margin-right: 5px;
 `;
 
 export const IconBackground = styled(RectButton)`
@@ -159,4 +159,12 @@ export const ButtonDescubraMaisText = styled.Text`
   color: #ffffff;
   font-size: 16px;
   font-family: 'GraphikMedium';
+`;
+
+export const HideInformation = styled.View`
+  height: 30px;
+  width: 250px;
+  background: #f0f1f5;
+  margin: 10px 0;
+  border-radius: 5px;
 `;
