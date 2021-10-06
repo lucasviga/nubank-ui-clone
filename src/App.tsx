@@ -2,6 +2,7 @@ import React from 'react';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {StatusBar} from 'react-native';
 import {Dashboard} from './pages/Dashboard';
+import {AccountInfoProvider} from './contexts/AccountInfo';
 
 const App = () => {
   return (
@@ -9,7 +10,9 @@ const App = () => {
       <StatusBar backgroundColor="#820AD1" barStyle="light-content" />
 
       <GestureHandlerRootView>
-        <Dashboard />
+        <AccountInfoProvider>
+          <Dashboard />
+        </AccountInfoProvider>
       </GestureHandlerRootView>
     </>
   );

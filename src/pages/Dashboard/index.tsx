@@ -1,66 +1,24 @@
-import React, {useRef, useState} from 'react';
-import {Animated, PanResponder} from 'react-native';
-import Icon from 'react-native-vector-icons/AntDesign';
-import IconMaterial from 'react-native-vector-icons/MaterialCommunityIcons';
+import React from 'react';
 
-import {Content} from '../../components/AccountContent';
+import {Account} from '../../components/Account';
+import {FindOutMore} from '../../components/FindOutMore';
+import {Header} from '../../components/Header';
+import {ServicesAccount} from '../../components/ServicesAccount';
 
-import {
-  Container,
-  Header,
-  Username,
-  HeaderLinks,
-  UserIcon,
-  HeaderContentButton,
-  HeaderButton,
-} from './styles';
+import {Container, Content} from './styles';
 
 export function Dashboard() {
-  const [isVisible, setIsVisible] = useState(true);
-
-  const handleChangeVisibility = () => {
-    setIsVisible(!isVisible);
-  };
-
   return (
     <Container>
-      <Header>
-        <HeaderLinks>
-          <UserIcon>
-            <Icon name="user" color="#FFFFFF" size={20} />
-          </UserIcon>
+      <Header />
 
-          <HeaderContentButton>
-            <HeaderButton onPress={handleChangeVisibility}>
-              {isVisible ? (
-                <IconMaterial name="eye-outline" color="#FFFFFF" size={22} />
-              ) : (
-                <IconMaterial
-                  name="eye-off-outline"
-                  color="#FFFFFF"
-                  size={22}
-                />
-              )}
-            </HeaderButton>
+      <Content>
+        <Account />
 
-            <HeaderButton>
-              <Icon name="questioncircleo" color="#FFFFFF" size={20} />
-            </HeaderButton>
+        <ServicesAccount />
 
-            <HeaderButton>
-              <IconMaterial
-                name="email-plus-outline"
-                color="#FFFFFF"
-                size={22}
-              />
-            </HeaderButton>
-          </HeaderContentButton>
-        </HeaderLinks>
-
-        <Username>Olá, Lucas</Username>
-      </Header>
-
-      <Content isVisible={isVisible} />
+        <FindOutMore />
+      </Content>
     </Container>
   );
 }
